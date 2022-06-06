@@ -1,0 +1,27 @@
+﻿<Window x:Class="sisTask.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:sisTask"
+        mc:Ignorable="d"
+        Title="RegistrationWindow" Height="450" Width="800">
+    <StackPanel Margin="50">
+        <TextBlock Text="Логин"/>
+        <TextBox Name="LoginTBox"/>
+        <TextBlock Text="Фамилия"/>
+        <TextBox Name="SecondNameBox"/>
+        <TextBlock Text="Имя"/>
+        <TextBox Name="NameBox"/>
+        <TextBlock Text="Отчество"/>
+        <TextBox Name="PatricBox"/>
+        <TextBlock Text="Номер телефона"/>
+        <TextBox Name="NumberBx"/>
+        <TextBlock Text="Пароль"/>
+        <PasswordBox Name="PasswordPBox"/>
+
+        <Button Content="Зарегистрироваться"
+        Name="RegIBtn"
+        Click="RegIBtn_Click"/>
+    </StackPanel>
+</Window>

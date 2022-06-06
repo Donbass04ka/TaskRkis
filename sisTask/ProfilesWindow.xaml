@@ -1,0 +1,21 @@
+﻿<Window x:Class="sisTask.ProfilesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:sisTask"
+        mc:Ignorable="d"
+        Title="ProfilesWindow" Height="450" Width="800">
+    <Grid>
+        <Button Name="ProfileBtn" Content="Профиль" Click="ProfileBtn_Click" Margin="0,0,561,387"/>
+        <Button Name="AccessBtn" Content="Доступные задания" Click="AccessBtn_Click" Margin="263,0,281,387" RenderTransformOrigin="0.497,0.571"/>
+        <Button Name="HistoryBtn" Content="История заданий" Click="HistoryBtn_Click" Margin="540,0,0,387"/>
+
+        <DataGrid Name="ProfilesGrid" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" Margin="0,52,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="30"/>
+                <DataGridTextColumn Header="Пользователь" Binding="{Binding Login}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

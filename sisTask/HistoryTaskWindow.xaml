@@ -1,0 +1,29 @@
+﻿<Window x:Class="sisTask.HistoryTaskWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:sisTask"
+        mc:Ignorable="d"
+        Title="HistoryTaskWindow" Height="450" Width="800">
+    <Grid Margin="-27,-21,0,0">
+        <TextBlock Text="Название: " HorizontalAlignment="Left" Margin="68,43,0,356" FontSize="24"/>
+        <TextBlock Text="{Binding Title}" HorizontalAlignment="Left" Margin="204,43,0,357" Width="603" FontSize="22"/>
+        <TextBlock Text="Описание: " HorizontalAlignment="Left" Margin="68,114,0,285" FontSize="24"/>
+        <TextBlock Text="{Binding Writing}" HorizontalAlignment="Left" Margin="68,170,0,102" Width="546" FontSize="22" TextWrapping="Wrap"/>
+        <ComboBox Name="phonesList" Height="30" VerticalAlignment="Top" Margin="656,168,53,0" RenderTransformOrigin="0.345,0.377" SelectionChanged="phonesList_SelectionChanged" Text="{Binding IdStatusNavigation.Title}">
+            <ComboBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.075"/>
+                    <TranslateTransform X="-0.005" Y="0.019"/>
+                </TransformGroup>
+            </ComboBox.RenderTransform>
+            <TextBlock Text="Готово"/>
+            <TextBlock Text="Свободно"/>
+            <TextBlock Text="Выполняется"/>
+            </ComboBox>
+        <Button Name="AccessBtn" Content="Применить" Click="AccessBtn_Click" Margin="281,403,281,10"/>
+    </Grid>
+</Window>

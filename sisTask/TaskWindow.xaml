@@ -1,0 +1,17 @@
+﻿<Window x:Class="sisTask.TaskWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:sisTask"
+        mc:Ignorable="d"
+        Title="TaskWindow" Height="450" Width="800">
+    <Grid Margin="-27,-21,0,0">
+        <TextBlock Text="Название: " HorizontalAlignment="Left" Margin="68,43,0,356" FontSize="24"/>
+        <TextBlock Text="{Binding Title}" HorizontalAlignment="Left" Margin="204,43,0,357" Width="603" FontSize="22"/>
+        <TextBlock Text="Описание: " HorizontalAlignment="Left" Margin="68,114,0,285" FontSize="24"/>
+        <TextBlock Text="{Binding Writing}" HorizontalAlignment="Center" Margin="0,170,0,76" Width="610" FontSize="24" TextWrapping="Wrap"/>
+        <Button Name="ExitBtn" Content="Взять задание" Click="ExitBtn_Click" Margin="53,403,454,10"/>
+        <Button Name="BackBtn" Content="Вернуться" Click="BackBtn_Click" Margin="487,403,20,10"/>
+    </Grid>
+</Window>
